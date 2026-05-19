@@ -8,6 +8,7 @@ approve every tool call automatically — no permission prompts shown.
 Works for every VS Code/Cursor window across every Space, regardless of foreground
 app, because the hook runs inside Claude Code's process. No screen capture needed.
 """
+import os
 import platform
 import threading
 import traceback
@@ -23,6 +24,9 @@ FLAG_PATH = WIDGET_DIR / "active"
 APPROVALS_LOG = WIDGET_DIR / "approvals.log"
 LOG_PATH = WIDGET_DIR / "log.txt"
 HOOK_PATH = Path.home() / ".claude" / "hooks" / "auto_yes_check.sh"
+
+SCRIPT_DIR = Path(os.path.dirname(os.path.abspath(__file__)))
+MENUBAR_ICON = SCRIPT_DIR / "assets" / "menubar.png"
 
 NSActivityUserInitiatedAllowingIdleSystemSleep = 0x00FFFFFF
 
@@ -61,7 +65,8 @@ def count_approvals():
 
 class AutoYesApp(rumps.App):
     def __init__(self):
-        super().__init__("🟦", quit_button=None)
+        icon = str(MENUBAR_ICON) if MENUBAR_ICON.exists() else None
+        super().__init__("", icon=icon, template=False, quit_button=None)
         self._nap_token = disable_app_nap()
         self.watching = False
         self.baseline_count = 0
@@ -125,7 +130,7 @@ class AutoYesApp(rumps.App):
             self.watching = False
             self._remove_flag()
             sender.title = "Start watching"
-            self.title = "🟦"
+            self.title = ""
             self.status_item.title = "Status: idle"
         else:
             if not HOOK_PATH.exists():
@@ -139,7 +144,7 @@ class AutoYesApp(rumps.App):
             self.baseline_count = count_approvals()
             self._write_flag()
             sender.title = "Stop watching"
-            self.title = "🟢"
+            self.title = " ●"
             self.status_item.title = "Status: watching"
 
     def reset_count(self, _):

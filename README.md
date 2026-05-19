@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/AutoPaws.png" width="180" alt="Auto-Paws logo">
+</p>
+
 # Auto-Paws 🐾
 
 [![macOS](https://img.shields.io/badge/macOS-12%2B-blue)](https://www.apple.com/macos/)
