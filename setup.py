@@ -3,9 +3,12 @@ from setuptools import setup
 APP = ['auto_yes.py']
 DATA_FILES = [
     ('assets', [
-        'assets/menubar.png',
-        'assets/menubar@2x.png',
+        'assets/menubar_idle.png',
+        'assets/menubar_idle@2x.png',
+        'assets/menubar_active.png',
+        'assets/menubar_active@2x.png',
         'assets/AutoPaws.png',
+        'assets/AutoPawsIdle.png',
     ]),
 ]
 OPTIONS = {
@@ -15,8 +18,8 @@ OPTIONS = {
         'CFBundleName': 'Auto-Paws',
         'CFBundleDisplayName': 'Auto-Paws',
         'CFBundleIdentifier': 'io.github.ritvik-hue.autopaws',
-        'CFBundleVersion': '1.0.1',
-        'CFBundleShortVersionString': '1.0.1',
+        'CFBundleVersion': '1.0.2',
+        'CFBundleShortVersionString': '1.0.2',
         'LSUIElement': True,
         'NSHighResolutionCapable': True,
     },
