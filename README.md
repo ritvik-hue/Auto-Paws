@@ -47,9 +47,11 @@ curl -sSL https://raw.githubusercontent.com/ritvik-hue/Auto-Paws/main/install_ho
 | Status | `idle` or `watching` |
 | Approvals (session) | Count since the widget started or you reset the session |
 | Approvals (lifetime) | All-time count since you installed Auto-Paws |
-| Time saved | Estimated, at ~10 seconds per skipped prompt |
+| Watching time | Total time the paw was green across all sessions — time you weren't tied to the screen waiting for prompts |
+| Saved (clicks) | ~10 seconds × lifetime approvals — time you didn't spend reading and clicking Yes |
+| Total time saved | Watching time + click time |
 | Reset session count | Zeroes the session counter |
-| Reset lifetime count | Wipes the lifetime log (with confirm dialog) |
+| Reset lifetime stats | Wipes lifetime approvals + watching time (with confirm dialog) |
 
 ## How it works
 

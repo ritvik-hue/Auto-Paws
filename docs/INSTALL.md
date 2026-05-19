@@ -54,9 +54,11 @@ Homebrew: [brew.sh](https://brew.sh).
 | Status | `idle` (yellow) or `watching` (green) |
 | Approvals (session) | Skipped since widget started or last "Reset session" |
 | Approvals (lifetime) | All-time skipped across all sessions |
-| Time saved | Estimated, at ~10 sec per skipped prompt |
+| Watching time | Total time the paw was green across all sessions |
+| Saved (clicks) | ~10 sec × lifetime approvals (time not spent reading/clicking) |
+| Total time saved | Watching time + click time |
 | Reset session count | Zeroes the session counter |
-| Reset lifetime count | Wipes lifetime log (with confirm dialog) |
+| Reset lifetime stats | Wipes lifetime approvals + watching time (with confirm dialog) |
 | Quit | Exit (removes flag file cleanly) |
 
 ---
