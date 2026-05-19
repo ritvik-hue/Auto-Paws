@@ -34,11 +34,11 @@ curl -sSL https://raw.githubusercontent.com/ritvik-hue/Auto-Paws/main/install_ho
 
 ## Use
 
-1. **🐾 yellow paw** appears in the menu bar after install.
+1. **Yellow paw** appears in the menu bar after install.
 2. Restart your Claude Code panel in VS Code / Cursor once — it needs to pick up the new hook.
-3. Click the paw → **Start watching**. Icon turns **🐾 green**.
+3. Click the paw → **Start watching**. Icon turns **green**.
 4. Claude Code now auto-approves every permission prompt across every VS Code window. Counters update live in the menu.
-5. Click → **Stop watching** to return to normal manual prompts.
+5. Click → **Stop watching** to return to normal manual prompts. Icon returns to yellow.
 
 ### Menu
 
@@ -75,7 +75,7 @@ System Settings → General → **Login Items** → **+** → select `/Applicati
 
 ## Trust note
 
-While the widget is in the **green** state, **every** Claude Code tool call (Bash, Edit, Write, MultiEdit, WebFetch, ...) is auto-approved. Toggle off between tasks if you want manual control. Closing the app cleanly always removes the flag.
+While the paw is **green**, **every** Claude Code tool call (Bash, Edit, Write, MultiEdit, WebFetch, ...) is auto-approved. Toggle off (paw goes yellow) between tasks if you want manual control. Closing the app cleanly always removes the flag.
 
 ## Build from source
 

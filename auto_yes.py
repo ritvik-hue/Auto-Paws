@@ -107,7 +107,6 @@ class AutoYesApp(rumps.App):
         self.time_saved_item = rumps.MenuItem("Time saved: 0s", callback=None)
         self.reset_session_item = rumps.MenuItem("Reset session count", callback=self.reset_session)
         self.reset_lifetime_item = rumps.MenuItem("Reset lifetime count", callback=self.reset_lifetime)
-        self.open_log_item = rumps.MenuItem("Open log", callback=self.open_log)
         self.menu = [
             self.watch_item,
             None,
@@ -118,8 +117,6 @@ class AutoYesApp(rumps.App):
             None,
             self.reset_session_item,
             self.reset_lifetime_item,
-            None,
-            self.open_log_item,
             None,
             rumps.MenuItem("Quit", callback=self.quit_widget),
         ]
@@ -212,10 +209,6 @@ class AutoYesApp(rumps.App):
         write_lifetime_offset(0)
         self.session_baseline = 0
         self._refresh_counts()
-
-    def open_log(self, _):
-        import subprocess
-        subprocess.Popen(["open", str(LOG_PATH)])
 
     def quit_widget(self, _):
         self._remove_flag()

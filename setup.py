@@ -8,7 +8,7 @@ DATA_FILES = [
         'assets/menubar_active.png',
         'assets/menubar_active@2x.png',
         'assets/AutoPaws.png',
-        'assets/AutoPawsIdle.png',
+        'assets/AutoPawsActive.png',
     ]),
 ]
 OPTIONS = {
@@ -18,8 +18,8 @@ OPTIONS = {
         'CFBundleName': 'Auto-Paws',
         'CFBundleDisplayName': 'Auto-Paws',
         'CFBundleIdentifier': 'io.github.ritvik-hue.autopaws',
-        'CFBundleVersion': '1.0.3',
-        'CFBundleShortVersionString': '1.0.3',
+        'CFBundleVersion': '1.0.4',
+        'CFBundleShortVersionString': '1.0.4',
         'LSUIElement': True,
         'NSHighResolutionCapable': True,
     },

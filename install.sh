@@ -108,6 +108,6 @@ echo "[5/5] Launching Auto-Paws..."
 open "$APP_DEST"
 
 echo ""
-echo "Done. Look for the 🟦 icon in your menu bar."
+echo "Done. Look for the Auto-Paws yellow paw icon in your menu bar."
 echo "Restart your Claude Code panel in VS Code/Cursor (once) so it picks up the hook."
-echo "Then click 🟦 → Start watching."
+echo "Then click the paw -> Start watching. Icon turns green while active."
